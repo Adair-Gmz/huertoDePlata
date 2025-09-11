@@ -1,0 +1,190 @@
+@import url('https://fonts.google.com/specimen/Open+Sans');
+
+:root {
+    --primary-color: #ff6b35;
+    --secondary-color: #f7931e;
+    --accent-color: #FFF4C9;
+    --light-color: #FFF4C9;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--light-color) !important;
+    overflow-x: hidden;
+}
+
+.bg-custom-light {
+    background-color: var(--light-color) !important;
+}
+
+.navbar-custom {
+    background-color: var(--accent-color) !important;
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease;
+}
+@media (max-width: 991.98px) {
+    .hero-features {
+        position: static;
+        transform: none;
+        flex-direction: column;
+        align-items: center; 
+        margin-top: 2rem;
+    }
+
+    .feature-item {
+        width: 100%;
+        max-width: 320px; 
+    }
+}
+.hero {
+background-image: url('../assets/img1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-image {
+    max-width: 100%;
+}
+
+.floating-img {
+    animation: float 3s ease-in-out infinite;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.btn-primary, .btn-secondary {
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 12px 24px;
+    font-family: 'Sans Serif', sans-serif;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: white;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.testimonials-section .card {
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #141414;
+}
+
+.hero h1, .hero p {
+    color: white;
+}
+
+.bg-brown-custom {
+    background-color: #B2AF84;
+}
+
+.quiz-section-new {
+    background-color: #FFF4C9;
+}
+
+.quiz-image-container {
+    background-image: url('../assets/img2.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 300px; 
+}
+
+.quiz-btn-custom {
+    background-color: #DD8A4E !important;
+    border-color: #DD8A4E !important;
+    color: white !important;
+    font-size: 1.25rem;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+}
+
+.quiz-btn-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+    .quiz-image-container {
+        min-height: 500px; 
+    }
+}
+.process-background {
+    background-image: url('../assets/img3.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.process-background .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+.process-background .card h5 {
+    color: rgb(204, 204, 204) !important; 
+}
+
+.process-background .card p {
+    color: rgba(167, 167, 167, 0.8) !important; 
+}
+.process-background .card {
+    background-color: rgba(46, 43, 43, 0.767);
+    backdrop-filter: blur(5px);
+    border: none;
+}
+
+.bg-custom-footer {
+    background-color: #CE6516 !important;
+}
