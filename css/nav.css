@@ -1,5 +1,5 @@
 .navbar-custom {
-    background-color: var(--accent-color) !important;
+    background-color: #999662;
     backdrop-filter: blur(10px);
     transition: background-color 0.3s ease;
 }
