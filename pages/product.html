@@ -2,15 +2,16 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Productos</title>
+  <title>Huerto de Plata</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" href="../img/logo.ico" type="image/x-icon">
   <link rel="stylesheet" href="../css/product.css">
   <link rel="stylesheet" href="../css/nav.css">
 </head>
 <body>
     <nav class="navbar navbar-custom">
         <div class="container-fluid">
-               <a class="navbar-brand fw-bold text-white" href="index.html"> <img src="../img/logo.png" alt="Logo" width="100" height="50" class="d-inline-block align-items-center me-2"> <span class="fs-3">El Huerto de Plata</span></a> <button class="navbar-toggler"
+               <a class="navbar-brand fw-bold text-white" href="../index.html"> <img src="../img/logo.png" alt="Logo" width="100" height="50" class="d-inline-block align-items-center me-2"> <span class="fs-3">El Huerto de Plata</span></a> <button class="navbar-toggler"
                 type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"> <span
                     class="navbar-toggler-icon"></span> </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -24,7 +25,7 @@
             </div>
         </div>
     </nav>
-<div class="container-fluid mt-2">
+<div class="container-fluid mt-0">
   <div class="row d-flex justify-content-center" id="productos-bienvenida">
 
     <!-- Columna izquierda: Imagen de fondo con texto a la derecha -->
@@ -45,7 +46,7 @@
   </div>
 </div>
 
-<div class="container mt-4">
+<div class="container mt-0 mt-lg-2">
   <div class="row d-flex justify-content-center" id="productos-container">
     <!-- Aquí se insertarán dinámicamente las cards -->
   </div>
@@ -56,7 +57,7 @@
   <div class="modal-dialog modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="modalTitulo"></h5>
+        <h5 class="modal-title" id="modalTitulo" style="color: #2d4a3e;"></h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
       <div class="modal-body" id="modalContenido">
@@ -67,29 +68,35 @@
 </div>
 
 <footer class="bg-custom-footer text-light pt-5 pb-4">
-        <div class="container" class="alineacion-responsive">
+        <div class="container text-center text-md-start">
             <div class="row">
                 <div class="col-12 col-md-12 col-lg-4">
                     <h5 class="text-uppercase fw-bold f-fo">🌿 El Huerto de Plata</h5>
                     <hr class="mb-4 mt-0 d-block mx-auto mx-lg-0"
                         style="width: 60px; height: 2px; background-color: #f1c40f;">
-                    <p class="f-fo"> Cultivamos experiencias digitales simples, elegantes y con un toque futurista. </p>
+                    <p class="special-align"><img src="../img/logo.png" alt="Logo" width="250" height="auto" style="text-align: center;"></p>
                 </div>
-                <div class="col-12 col-md-12 col-lg-4 d-flex flex-column justify-content-center align-items-center">
-                    <h6 class="text-uppercase fw-bold">Enlaces útiles</h6>
-                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                <div class="col-12 col-md-12 col-lg-4">
+                    <h6 class="text-uppercase fw-bold f-fo">Redes Sociales</h6>
+                    <hr class="mb-4 mt-0 d-block mx-auto mx-lg-0"
                         style="width: 60px; height: 2px; background-color: #f1c40f;">
-                    <p><a href="#inicio" class="text-light text-decoration-none">Inicio</a></p>
-                    <p><a href="#nosotros" class="text-light text-decoration-none">Nosotros</a></p>
-                    <p><a href="#contacto" class="text-light text-decoration-none">Contacto</a></p>
+                    <p class="special-align"><img width="48" height="48" src="https://img.icons8.com/color/48/tiktok--v1.png" alt="tiktok--v1"/>
+                        <a href="https://www.facebook.com/profile.php?id=61554439343517" class="text-light text-decoration-none">TikTok</a></p><br>
+                    <p class="special-align"><img width="48" height="48" src="https://img.icons8.com/fluency/50/facebook-new.png" alt="facebook-new"/>
+                        <a href="https://www.tiktok.com/@elhuertodeplata" class="text-light text-decoration-none">Facebook</a></p><br>
+                    <p class="special-align"><img width="48" height="48" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new"/>
+                        <a href="https://www.instagram.com/huertodeplata/" class="text-light text-decoration-none">Instagram</a></p>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4">
                     <h6 class="text-uppercase fw-bold f-fo">Contacto</h6>
                     <hr class="mb-4 mt-0 d-block mx-auto mx-lg-0"
                         style="width: 60px; height: 2px; background-color: #f1c40f;">
-                    <p class="f-fo"><i class="bi bi-house-door-fill me-2"></i> Ciudad de México, MX</p>
-                    <p class="f-fo"><i class="bi bi-envelope-fill me-2"></i> contacto@huertodeplata.com</p>
-                    <p class="f-fo"><i class="bi bi-phone-fill me-2"></i> +52 55 1234 5678</p>
+                    <p class="special-align"><img width="48" height="48" src="https://img.icons8.com/fluency/48/home.png" alt="home"/>
+                        Ciudad de México, MX</p>
+                    <p class="special-align"><img width="48" height="48" src="https://img.icons8.com/fluency/48/apple-mail.png" alt="apple-mail"/>
+                        contacto@huertodeplata.com</p>
+                    <p class="special-align"><img width="48" height="48" src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="whatsapp--v1"/>
+                        <a href="https://wa.me/message/QPGNI25GRI6GJ1" class="text-light text-decoration-none">+52 55 8304 6128</a></p>
                 </div>
             </div>
         </div>
