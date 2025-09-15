@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Shampoo - El Huerto de Plata</title>
+    <link rel="stylesheet" href="/css/quiz.css">
+</head>
+<body>
+    <div class="container">
+        <div class="quiz-header">
+            <h1>🌿 El Huerto de Plata 🌿</h1>
+            <p>Descubre el shampoo perfecto para tu cabello</p>
+        </div>
+
+        <div id="start-screen" class="start-screen">
+            <h2 style="color: #2F4F2F; margin-bottom: 20px;">¡Bienvenido/a!</h2>
+            <p style="color: #000000; font-size: 1.2em; margin-bottom: 20px;">
+                Responde unas sencillas preguntas y te ayudaremos a encontrar el shampoo ideal para las necesidades específicas de tu cabello.
+            </p>
+            <button class="start-btn" onclick="startQuiz()">Comenzar Quiz</button>
+        <a href="../index.html"><button class="start-btn">Regresar al Inicio</button></a>
+        </div>
+
+        <div id="quiz-container" style="display: none;">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress"></div>
+            </div>
+
+            <div class="quiz-card active" id="question-1">
+                <div class="question">¿El agua con la que te bañas es muy clorada o con mucha sal?</div>
+                <div class="options">
+                    <button class="option-btn" onclick="handleAnswer(1, 'si')">Sí</button>
+                    <button class="option-btn" onclick="handleAnswer(1, 'no')">No</button>
+                </div>
+            </div>
+
+            <div class="quiz-card" id="question-2">
+                <div class="question">¿Tu cabello es rizado?</div>
+                <div class="options">
+                    <button class="option-btn" onclick="handleAnswer(2, 'si')">Sí</button>
+                    <button class="option-btn" onclick="handleAnswer(2, 'no')">No</button>
+                </div>
+                <div class="navigation-buttons">
+                    <button class="nav-btn prev-btn" onclick="goToPreviousQuestion()" id="prev-btn-2">← Anterior</button>
+                    <button class="nav-btn next-btn" onclick="goToNextQuestion()" id="next-btn-2" disabled>Siguiente →</button>
+                </div>
+            </div>
+
+            <div class="quiz-card" id="question-3">
+                <div class="question">¿Cuál es tu género?</div>
+                <div class="options">
+                    <button class="option-btn" onclick="handleAnswer(3, 'hombre')">Hombre</button>
+                    <button class="option-btn" onclick="handleAnswer(3, 'mujer')">Mujer</button>
+                </div>
+                <div class="navigation-buttons">
+                    <button class="nav-btn prev-btn" onclick="goToPreviousQuestion()" id="prev-btn-3">← Anterior</button>
+                    <button class="nav-btn next-btn" onclick="goToNextQuestion()" id="next-btn-3" disabled>Siguiente →</button>
+                </div>
+            </div>
+
+            <div class="quiz-card" id="question-4">
+                <div class="question">¿Tienes cuero cabelludo graso?</div>
+                <div class="options">
+                    <button class="option-btn" onclick="handleAnswer(4, 'si')">Sí</button>
+                    <button class="option-btn" onclick="handleAnswer(4, 'no')">No</button>
+                </div>
+                <div class="navigation-buttons">
+                    <button class="nav-btn prev-btn" onclick="goToPreviousQuestion()" id="prev-btn-4">← Anterior</button>
+                    <button class="nav-btn next-btn" onclick="goToNextQuestion()" id="next-btn-4" disabled>Siguiente →</button>
+                </div>
+            </div>
+
+            <div class="quiz-card" id="question-5">
+                <div class="question">¿Tu cabello es largo?</div>
+                <div class="options">
+                    <button class="option-btn" onclick="handleAnswer(5, 'si')">Sí</button>
+                    <button class="option-btn" onclick="handleAnswer(5, 'no')">No</button>
+                </div>
+                <div class="navigation-buttons">
+                    <button class="nav-btn prev-btn" onclick="goToPreviousQuestion()" id="prev-btn-5">← Anterior</button>
+                    <button class="nav-btn next-btn" onclick="goToNextQuestion()" id="next-btn-5" disabled>Siguiente →</button>
+                </div>
+            </div>
+
+            <div class="quiz-card" id="question-6">
+                <div class="question">¿Quieres detener la caída o estimular el crecimiento del cabello?</div>
+                <div class="options">
+                    <button class="option-btn" onclick="handleAnswer(6, 'caida')">Detener caída</button>
+                    <button class="option-btn" onclick="handleAnswer(6, 'crecimiento')">Estimular crecimiento</button>
+                    <button class="option-btn" onclick="handleAnswer(6, 'ambos')">Ambos</button>
+                    <button class="option-btn" onclick="handleAnswer(6, 'ninguno')">Ninguno</button>
+                </div>
+                <div class="navigation-buttons">
+                    <button class="nav-btn prev-btn" onclick="goToPreviousQuestion()" id="prev-btn-6">← Anterior</button>
+                    <button class="nav-btn next-btn" onclick="goToNextQuestion()" id="next-btn-6" disabled>Siguiente →</button>
+                </div>
+            </div>
+
+            <div class="quiz-card" id="question-7">
+                <div class="question">¿Tomas algún medicamento o estás sometido/a a estrés?</div>
+                <div class="options">
+                    <button class="option-btn" onclick="handleAnswer(7, 'si')">Sí</button>
+                    <button class="option-btn" onclick="handleAnswer(7, 'no')">No</button>
+                </div>
+                <div class="navigation-buttons">
+                    <button class="nav-btn prev-btn" onclick="goToPreviousQuestion()" id="prev-btn-7">← Anterior</button>
+                    <button class="nav-btn next-btn" onclick="goToNextQuestion()" id="next-btn-7" disabled>Siguiente →</button>
+                </div>
+            </div>
+
+            <div class="quiz-card" id="question-8">
+                <div class="question">¿Tienes algún tratamiento químico en el cabello?</div>
+                <div class="options">
+                    <button class="option-btn" onclick="handleAnswer(8, 'si')">Sí</button>
+                    <button class="option-btn" onclick="handleAnswer(8, 'no')">No</button>
+                </div>
+                <div class="navigation-buttons">
+                    <button class="nav-btn prev-btn" onclick="goToPreviousQuestion()" id="prev-btn-8">← Anterior</button>
+                    <button class="nav-btn next-btn finish-btn" onclick="showResult()" id="next-btn-8" disabled>Ver Resultado</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="result" class="result-card">
+            <div class="result-title" id="result-title">¡Tu shampoo ideal!</div>
+            <div class="result-description" id="result-description"></div>
+            <button class="restart-btn" onclick="restartQuiz()">Hacer el quiz otra vez</button>
+        </div>
+    </div>
+
+    <script src="/js/quiz.js"></script>
+</body>
+</html>

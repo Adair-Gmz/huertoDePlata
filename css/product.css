@@ -1,0 +1,225 @@
+@import url('https://fonts.google.com/specimen/Open+Sans');
+
+:root {
+    --primary-color: #ff6b35;
+    --secondary-color: #f7931e;
+    --accent-color: #FFF4C9;
+    --light-color: #FFF4C9;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--light-color) !important;
+    overflow-x: hidden;
+}
+.bg-custom-light {
+    background-color: var(--light-color) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #141414;
+}
+.hero h1, .hero p {
+    color: white;
+}
+
+.btn-primary, .btn-secondary, .btn-warning {
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 12px 24px;
+    font-family: 'Sans Serif', sans-serif;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: green;
+    border-color: green;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: rgb(0, 175, 0);
+    border-color: rgb(0, 175, 0);
+    transform: translateY(-2px);
+}
+
+.btn-warning {
+    background-color: gray;
+    border-color: gray;
+}
+
+.bg-brown-custom {
+    background-color: #B2AF84;
+}
+
+.bg-custom-footer {
+    background-color: #CE6516 !important;
+}
+.card{
+  background-color: #b2af848c;
+}
+.modal-content{
+  background-color: var(--light-color);
+}
+.card-img-top {
+    height: auto;           /* 40% del alto de la pantalla */
+    width: 65vw;            /* Que se adapte al ancho */
+    object-fit: cover;      /* Recorta la imagen de forma elegante */
+    overflow: hidden;       /* Por si acaso */
+    margin-top: 1rem;
+    border-radius: 1rem;
+  }
+.card-img-show {
+    height: auto;           /* 40% del alto de la pantalla */
+    width: 48vw;            /* Que se adapte al ancho */
+    object-fit: cover;      /* Recorta la imagen de forma elegante */
+    overflow: hidden;       /* Por si acaso */
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+  }
+p {
+    font-size: 2rem;
+  }
+h5, h6 {
+    font-size: 2rem;
+  }
+button, a {
+    font-size: 2rem !important;
+  }
+.bg-image{
+  background-image: url('../img/back.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  height: 25vh;
+  display: flex;                  /* ← clave para alinear el contenido */
+  align-items: center;           /* centra verticalmente */
+  justify-content: flex-end;     /* empuja el contenido al lado derecho */
+}
+.contenido-texto {
+  width: 50%; /* Solo usa el 50% derecho */
+  text-align: right;
+}
+/* Estilos del título */
+.titulo-productos {
+  font-size: 200%;
+  font-weight: bold;
+  color: #145A32;
+  background-color: rgba(163, 217, 165, 0.5);
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+.bg-verde {
+  background-color: #2ecc71;
+  display: flex;                  
+  align-items: center;
+}
+.video-producto {
+  width: 80vw;
+  height: auto;
+  border-radius: 1rem;
+}
+.a-ex{
+  all: unset; /* Elimina todos los estilos CSS heredados o aplicados */
+  text-align: center; /* Añades solo lo que quieres */
+  display: inline-block;
+  color: #141414;
+  font-size: 1.8rem !important;
+}
+.f-fo{
+  text-align: center;
+}
+hr{
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 1024px) {
+  .card-img-top {
+    height: auto;          
+    width: 22vw;            
+    object-fit: cover;      /* Recorta la imagen de forma elegante */
+    overflow: hidden;       /* Por si acaso */
+    margin-top: 0.5rem;
+    border-radius: 1rem;
+  }
+  .card-img-show {
+    height: auto;           
+    width: 65vh;            /* Que se adapte al ancho */
+    object-fit: cover;      /* Recorta la imagen de forma elegante */
+    overflow: hidden;       /* Por si acaso */
+    margin-bottom: 0.5rem;
+    border-radius: 2rem;
+  }
+  p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  h5, h6 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  button, a {
+    font-size: 1rem !important;
+  }
+  .bg-image{
+    background-image: url('../img/back.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    height: 50vh;
+    display: flex;                  /* ← clave para alinear el contenido */
+    align-items: center;           /* centra verticalmente */
+    justify-content: flex-end;     /* empuja el contenido al lado derecho */
+    width: 50%;
+  }
+  .contenido-texto {
+    width: 50%; /* Solo usa el 50% derecho */
+    text-align: right;
+  }
+  /* Estilos del título */
+  .titulo-productos {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #145A32;
+    background-color: rgba(163, 217, 165, 0.5);
+    padding: 1rem;
+  }
+  .bg-verde {
+    background-color: #2ecc71;
+    width: 50%;
+    height: 50vh;
+    display: flex;
+      justify-content: center; /* Centra horizontalmente */
+      align-items: center;  
+  }
+  .video-producto {
+    width: auto;
+    height: 40vh;
+    border-radius: 1rem;
+  }
+  .a-ex{
+    all: unset; /* Elimina todos los estilos CSS heredados o aplicados */
+    text-align: center; /* Añades solo lo que quieres */
+    display: inline-block;
+    color: #141414;
+    font-size: 1.25rem !important;
+  }
+  .f-fo{
+    text-align: left;
+  }
+}

@@ -1,0 +1,225 @@
+.navbar-custom {
+    background-color: var(--accent-color) !important;
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease;
+}
+
+@media (min-width: 992px) {
+       .navbar-collapse {
+        transition: height 0.5s ease, background-color 0.5s ease;
+        overflow: hidden;
+        height: 0;
+        background-color: #f3581b;
+    }
+
+    .navbar-collapse.show {
+        height: 270px;
+        border-bottom: 1px solid black;
+    }
+
+    .navbar-nav {
+        padding: 20px 0;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .navbar-nav .nav-link {
+        color: white !important;
+        font-weight: 100;
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 0.4em;
+    }
+
+    .navbar-nav .nav-link:hover {
+        letter-spacing: 0.5em;
+        text-decoration: underline;
+    }
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    outline: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+    top: -10px;
+}
+
+.navbar-toggler-icon::after {
+    top: 10px;
+}
+
+.navbar-toggler.active .navbar-toggler-icon {
+    background-color: transparent;
+}
+
+.navbar-toggler.active .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.navbar-toggler.active .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        transition: height 0.5s ease, background-color 0.5s ease;
+        overflow: hidden;
+        height: 0;
+        background-color: #f3581b;
+    }
+
+    .navbar-collapse.show {
+        height: 270px;
+        border-bottom: 1px solid black;
+    }
+
+    .navbar-nav {
+        padding: 20px 0;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .navbar-nav .nav-link {
+        color: white !important;
+        font-weight: 100;
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 0.4em;
+    }
+
+    .navbar-nav .nav-link:hover {
+        letter-spacing: 0.5em;
+        text-decoration: underline;
+    }
+}
+
+
+.hero-main {
+    background-image: url('../assets/img1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.hero-main .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-main h1,
+.hero-main p {
+    color: white;
+}
+
+.hero-main .floating-img {
+    animation: float 3s ease-in-out infinite;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.quiz-image-container {
+    background-image: url('../assets/img2.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+}
+
+@media (min-width: 768px) {
+    .quiz-image-container {
+        min-height: 500px;
+    }
+}
+
+.process-background {
+    background-image: url('../assets/img3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.process-background .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.process-background .card {
+    background-color: rgba(46, 43, 43, 0.767);
+    backdrop-filter: blur(5px);
+    border: none;
+}
+
+.process-background .card h5 {
+    color: rgb(204, 204, 204) !important;
+}
+
+.process-background .card p {
+    color: rgba(167, 167, 167, 0.8) !important;
+}
